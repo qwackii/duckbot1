@@ -1,0 +1,558 @@
+{
+  "nodes": [
+    {
+      "type": "response",
+      "name": "say message store",
+      "guid": "d3f3e817-f08b-4f10-b763-3a2a1deb44b2",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "saidmessage",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "e39c444e-ffaf-4790-8ca7-16352b3a4244"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "855a2aec-035e-47e4-930a-bc0a1a39df6e"
+        }
+      ],
+      "x": 485,
+      "y": 243,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "saidmessage",
+        "Text",
+        "temp",
+        "0"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "boy says message",
+      "guid": "e39c444e-ffaf-4790-8ca7-16352b3a4244",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d3f3e817-f08b-4f10-b763-3a2a1deb44b2"
+        }
+      ],
+      "x": 747,
+      "y": 256,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "${tempVars.saidmessage}",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "say",
+      "guid": "855a2aec-035e-47e4-930a-bc0a1a39df6e",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "d3f3e817-f08b-4f10-b763-3a2a1deb44b2"
+          ]
+        }
+      ],
+      "x": 256,
+      "y": 231
+    },
+    {
+      "type": "response",
+      "name": "status update",
+      "guid": "6de45e9a-25ae-41c8-8759-e91750d8910b",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "224b17d9-af8f-4339-9fe0-0c9040ee828a"
+        }
+      ],
+      "x": 742,
+      "y": 415,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Status",
+      "formdata": [
+        "dnd"
+      ],
+      "formnames": [
+        "presencestatus"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "dnd",
+      "guid": "d1398456-7c64-4e00-80be-dad473e7e582",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "224b17d9-af8f-4339-9fe0-0c9040ee828a"
+          ]
+        }
+      ],
+      "x": 244,
+      "y": 449,
+      "perms": []
+    },
+    {
+      "type": "command",
+      "name": "online",
+      "guid": "920bb246-a868-4da7-92c2-f8a91391c92f",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "5b92c60d-301b-4532-a460-90a39cf15a28"
+          ]
+        }
+      ],
+      "x": 236,
+      "y": 583
+    },
+    {
+      "type": "response",
+      "name": "status update 2",
+      "guid": "0ab311bb-5ed1-4949-8ecc-2ebf9debfe1a",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5b92c60d-301b-4532-a460-90a39cf15a28"
+        }
+      ],
+      "x": 684,
+      "y": 556,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Status",
+      "formdata": [
+        "online"
+      ],
+      "formnames": [
+        "presencestatus"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "purge",
+      "guid": "a51781eb-d65c-4712-883a-5e2d203313dc",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "11cb4f89-3b1d-4be7-971b-7207eb1927f6"
+          ]
+        }
+      ],
+      "x": 250,
+      "y": 950,
+      "perms": [
+        "duck",
+        "o w n e r"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get count",
+      "guid": "11cb4f89-3b1d-4be7-971b-7207eb1927f6",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "purge",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "c2119ab7-f4c0-4388-99e3-92b52e7458dd"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "a51781eb-d65c-4712-883a-5e2d203313dc"
+        }
+      ],
+      "x": 484,
+      "y": 940,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "purge",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "purge messages",
+      "guid": "c2119ab7-f4c0-4388-99e3-92b52e7458dd",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "11cb4f89-3b1d-4be7-971b-7207eb1927f6"
+        }
+      ],
+      "x": 769,
+      "y": 938,
+      "rtype": "Channel Action",
+      "rsubtype": "Delete All Messages",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "${tempVars.purge}"
+      ],
+      "formnames": [
+        "channelname",
+        "msgcount"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "speak",
+      "guid": "405d530a-0609-450b-aaa2-6d6c7a519aeb",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "23d0b9f2-bed0-4cd0-a10b-df55c5874e00"
+          ]
+        }
+      ],
+      "x": 236,
+      "y": 767,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "say message store_1",
+      "guid": "23d0b9f2-bed0-4cd0-a10b-df55c5874e00",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "saidmessage1",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "98d79d27-d6a6-44e4-a1b2-8aec093b75ed"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "405d530a-0609-450b-aaa2-6d6c7a519aeb"
+        }
+      ],
+      "x": 451,
+      "y": 766,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "saidmessage1",
+        "Text",
+        "temp",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "boy says message_2",
+      "guid": "98d79d27-d6a6-44e4-a1b2-8aec093b75ed",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "23d0b9f2-bed0-4cd0-a10b-df55c5874e00"
+        }
+      ],
+      "x": 710,
+      "y": 743,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "˚✦general",
+        "${tempVars.saidmessage1}",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "wait_1",
+      "guid": "224b17d9-af8f-4339-9fe0-0c9040ee828a",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "6de45e9a-25ae-41c8-8759-e91750d8910b"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d1398456-7c64-4e00-80be-dad473e7e582"
+        }
+      ],
+      "x": 484,
+      "y": 429,
+      "rtype": "Message",
+      "rsubtype": "Wait",
+      "formdata": [
+        "2"
+      ],
+      "formnames": [
+        "seconds"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "wait_1_1",
+      "guid": "5b92c60d-301b-4532-a460-90a39cf15a28",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "0ab311bb-5ed1-4949-8ecc-2ebf9debfe1a"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "920bb246-a868-4da7-92c2-f8a91391c92f"
+        }
+      ],
+      "x": 462,
+      "y": 588,
+      "rtype": "Message",
+      "rsubtype": "Wait",
+      "formdata": [
+        "2"
+      ],
+      "formnames": [
+        "seconds"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "yes or no?",
+      "guid": "da312b8d-741f-405d-b519-b98316af5a8c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "858f9e38-b783-4a66-8a4b-b23e3f4646bb"
+        }
+      ],
+      "x": 731,
+      "y": 1112,
+      "rtype": "Message",
+      "rsubtype": "Embed Poll",
+      "formdata": [
+        "yes or no?",
+        "A929FF",
+        "yes or no?",
+        "",
+        "",
+        "1, 2, 3 ,4, 5, 6, 7, 8, 9, 10"
+      ],
+      "formnames": [
+        "title",
+        "color",
+        "description",
+        "thumbnail",
+        "image",
+        "options"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "poll",
+      "guid": "b0c4c8d9-914d-4fbf-a290-61642d36b4f4",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "858f9e38-b783-4a66-8a4b-b23e3f4646bb"
+          ]
+        }
+      ],
+      "x": 262,
+      "y": 1098
+    },
+    {
+      "type": "command",
+      "name": "fuck you",
+      "guid": "64509941-a694-4bef-8324-b6d520fb28fc",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "19bb4b03-f277-4458-a3a8-c87c3f697468"
+          ]
+        }
+      ],
+      "x": 278,
+      "y": 121
+    },
+    {
+      "type": "response",
+      "name": "fuck me? fuck you",
+      "guid": "19bb4b03-f277-4458-a3a8-c87c3f697468",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "fuck",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "64509941-a694-4bef-8324-b6d520fb28fc"
+        }
+      ],
+      "x": 496,
+      "y": 100,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "˚✦general",
+        "fuck me? fuck you",
+        "fuck",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "wait",
+      "guid": "858f9e38-b783-4a66-8a4b-b23e3f4646bb",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "da312b8d-741f-405d-b519-b98316af5a8c"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b0c4c8d9-914d-4fbf-a290-61642d36b4f4"
+        }
+      ],
+      "x": 488,
+      "y": 1110,
+      "rtype": "Message",
+      "rsubtype": "Wait",
+      "formdata": [
+        "2"
+      ],
+      "formnames": [
+        "seconds"
+      ]
+    }
+  ]
+}

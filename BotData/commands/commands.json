@@ -1,0 +1,147 @@
+{
+  "command": [
+    {
+      "name": "say",
+      "actions": [
+        {
+          "name": "say message store",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "saidmessage",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "0"
+        },
+        {
+          "name": "boy says message",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "${tempVars.saidmessage}",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "dnd",
+      "perms": [],
+      "actions": [
+        {
+          "name": "wait_1",
+          "category": "Message",
+          "type": "Wait",
+          "seconds": "2"
+        },
+        {
+          "name": "status update",
+          "category": "Bot Action",
+          "type": "Set Bot Status",
+          "presencestatus": "dnd"
+        }
+      ]
+    },
+    {
+      "name": "online",
+      "actions": [
+        {
+          "name": "wait_1_1",
+          "category": "Message",
+          "type": "Wait",
+          "seconds": "2"
+        },
+        {
+          "name": "status update 2",
+          "category": "Bot Action",
+          "type": "Set Bot Status",
+          "presencestatus": "online"
+        }
+      ]
+    },
+    {
+      "name": "purge",
+      "perms": [
+        "duck",
+        "o w n e r"
+      ],
+      "actions": [
+        {
+          "name": "get count",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "purge",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "purge messages",
+          "category": "Channel Action",
+          "type": "Delete All Messages",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "msgcount": "${tempVars.purge}"
+        }
+      ]
+    },
+    {
+      "name": "speak",
+      "perms": [],
+      "actions": [
+        {
+          "name": "say message store_1",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "saidmessage1",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "boy says message_2",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "˚✦general",
+          "messagetext": "${tempVars.saidmessage1}",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "poll",
+      "actions": [
+        {
+          "name": "wait",
+          "category": "Message",
+          "type": "Wait",
+          "seconds": "2"
+        },
+        {
+          "name": "yes or no?",
+          "category": "Message",
+          "type": "Embed Poll",
+          "title": "yes or no?",
+          "color": "A929FF",
+          "description": "yes or no?",
+          "thumbnail": "",
+          "image": "",
+          "options": "1, 2, 3 ,4, 5, 6, 7, 8, 9, 10"
+        }
+      ]
+    },
+    {
+      "name": "fuck you",
+      "actions": [
+        {
+          "name": "fuck me? fuck you",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "˚✦general",
+          "messagetext": "fuck me? fuck you",
+          "savetovariable": "fuck",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}
